@@ -1,9 +1,10 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import App from "./components/InitialClone";
+import App from "./App";
 
+jest.useFakeTimers();
 describe("<App />", () => {
-  it("matches last snapshot", async () => {
+  it("matches last snapshot", () => {
     const tree = renderer.create(<App />).toJSON();
     expect(tree).toMatchSnapshot();
   });

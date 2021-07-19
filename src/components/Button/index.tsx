@@ -21,7 +21,7 @@ const Button = ({
   if (triple) stylesButton.push(styles.buttonTriple);
   if (operation) stylesButton.push(styles.operationButton);
   return (
-    <TouchableHighlight onPress={() => listenner(label)}>
+    <TouchableHighlight testID="buttonOnly" onPress={() => listenner(label)}>
       <Text style={stylesButton}> {label}</Text>
     </TouchableHighlight>
   );

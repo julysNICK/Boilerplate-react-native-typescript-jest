@@ -3,8 +3,6 @@ import { View, StyleSheet } from "react-native";
 import Button from "./components/Button";
 import Display from "./components/Display";
 
-import CalculatorScreen from "./screens/CalculatorScreen";
-
 const App = () => {
   const [displayValue, setdisplayValue] = useState("0");
   const [clearDisplay, setclearDisplay] = useState(false);

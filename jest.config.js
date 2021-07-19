@@ -1,8 +1,8 @@
 // jest.config.js
 // Sync object
 module.exports = {
-  testEnvironment: "jsdom",
   preset: "jest-expo",
+
   globals: {
     "ts-jest": {
       tsconfig: {
@@ -27,7 +27,10 @@ module.exports = {
     "!<rootDir>/node_modules/",
   ],
   moduleFileExtensions: ["js", "ts", "tsx"],
+  setupFilesAfterEnv: ["@testing-library/jest-native/extend-expect"],
   transformIgnorePatterns: [
     "node_modules/(?!(jest-)?react-native|react-clone-referenced-element|@react-native-community|expo(nent)?|@expo(nent)?/.*|react-navigation|@react-navigation/.*|@unimodules/.*|sentry-expo|native-base)",
   ],
+  testPathIgnorePatterns: ["/node_modules/"],
+  setupFiles: ["<rootDir>/.jest/setup-tests.js"],
 };
